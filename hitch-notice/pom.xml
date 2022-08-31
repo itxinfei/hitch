@@ -93,55 +93,55 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
             <!-- Docker maven plugin -->
-            <plugin>
+            <!--<plugin>
                 <groupId>com.google.cloud.tools</groupId>
                 <artifactId>jib-maven-plugin</artifactId>
                 <version>2.8.0</version>
                 <configuration>
                     <allowInsecureRegistries>true</allowInsecureRegistries>
-                    <!--from节点用来设置镜像的基础镜像，相当于Docerkfile中的FROM关键字-->
+                    &lt;!&ndash;from节点用来设置镜像的基础镜像，相当于Docerkfile中的FROM关键字&ndash;&gt;
                     <from>
-                        <!--使用openjdk官方镜像，tag是:8-jdk-alpine，表示镜像的操作系统是alpine,装好了jdk8-->
+                        &lt;!&ndash;使用openjdk官方镜像，tag是:8-jdk-alpine，表示镜像的操作系统是alpine,装好了jdk8&ndash;&gt;
                         <image>openjdk:8-jdk-alpine</image>
                     </from>
                     <to>
-                        <!--镜像名称和tag，使用了mvn内置变量${project.version}，表示当前工程的version-->
+                        &lt;!&ndash;镜像名称和tag，使用了mvn内置变量${project.version}，表示当前工程的version&ndash;&gt;
                         <image>${docker.registry.url}/${docker.registry.name}/${project.artifactId}:${project.version}
                         </image>
                         <tags>
-                            <!--版本号-->
+                            &lt;!&ndash;版本号&ndash;&gt;
                             <tag>${project.version}</tag>
                         </tags>
-                        <!--harbor的认证信息-->
+                        &lt;!&ndash;harbor的认证信息&ndash;&gt;
                         <auth>
                             <username>${docker.registry.username}</username>
                             <password>${docker.registry.password}</password>
                         </auth>
                     </to>
-                    <!--容器相关的属性-->
+                    &lt;!&ndash;容器相关的属性&ndash;&gt;
                     <container>
 
                         <jvmFlags>
-                            <!--一些启动参数-->
+                            &lt;!&ndash;一些启动参数&ndash;&gt;
                             <jvmFlag>-Djava.security.edg=file:/dev/./urandom</jvmFlag>
                         </jvmFlags>
-                        <!--挂载volume的配置-->
+                        &lt;!&ndash;挂载volume的配置&ndash;&gt;
                         <volumes>
                             <volume>/tmp</volume>
                             <volume>/logs</volume>
                         </volumes>
                         <ports>
-                            <!--暴漏端口号-->
+                            &lt;!&ndash;暴漏端口号&ndash;&gt;
                             <port>${project.server.prot}</port>
                         </ports>
 
                         <format>OCI</format>
-                        <!--使用该参数将镜像的创建时间与系统时间对其-->
+                        &lt;!&ndash;使用该参数将镜像的创建时间与系统时间对其&ndash;&gt;
                         <creationTime>USE_CURRENT_TIMESTAMP</creationTime>
                     </container>
                 </configuration>
                 <executions>
-                    <!--执行打包配置-->
+                    &lt;!&ndash;执行打包配置&ndash;&gt;
                     <execution>
                         <id>jib-maven-plugin</id>
                         <phase>install</phase>
@@ -150,7 +150,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin>-->
             <!-- Docker maven plugin -->
         </plugins>
     </build>
