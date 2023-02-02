@@ -1,0 +1,5 @@
+com\heima\gateway\configuration\RedisConfiguration.class
+com\heima\gateway\configuration\TokenAuthGatewayFilterFactory.class
+com\heima\gateway\configuration\TokenAuthGatewayFilterFactory$PathConfig.class
+com\heima\gateway\configuration\TokenAuthGatewayFilterFactory$1.class
+com\heima\gateway\GatewayApplication.class

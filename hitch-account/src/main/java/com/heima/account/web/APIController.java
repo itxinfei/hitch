@@ -105,6 +105,4 @@ public class APIController {
     public ResponseVO<VehicleVO> vehicleAuth() {
         return accountHandler.vehicleAuth();
     }
-
-
 }
