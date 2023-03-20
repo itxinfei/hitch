@@ -14,6 +14,7 @@ public class Test {
     }
 
     public static void main(String args[]) {
+        System.out.println("输出一个3X3的对角矩阵");
         Mat a = Mat.eye(3, 3, CvType.CV_8UC1); //输出一个3X3的对角矩阵
         System.out.println(a.dump());
     }

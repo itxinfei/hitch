@@ -14,8 +14,10 @@
             <groupId>org.opencv</groupId>
             <artifactId>opencv</artifactId>
             <version>4.5.3</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/opencv-453.jar</systemPath>
+            <!--这里我打包到本地仓库了-->
+            <!--mvn install:install-file -DgroupId=org.opencv -DartifactId=opencv -Dversion=4.5.3 -Dpackaging=jar -Dfile=E:\developServer\Repository\opencv-453.jar-->
+            <!--<scope>system</scope>-->
+            <!--<systemPath>${basedir}/lib/opencv-453.jar</systemPath>-->
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
