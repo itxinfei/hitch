@@ -8,42 +8,42 @@ spring:
       server-addr: 192.168.1.80:8848
     gateway:
       routes:
-        # è´¦æˆ·æœåŠ¡APIä»£ç†
+        # ÕË»§·şÎñAPI´úÀí
         - id: hitch-account-server
           uri: lb://hitch-account-server
           predicates:
             - Path=/account/**
-        # åº“å­˜æœåŠ¡APIä»£ç†
+        # ¿â´æ·şÎñAPI´úÀí
         - id: hitch-storage-server
           uri: lb://hitch-storage-server
           predicates:
             - Path=/storage/**
-        # è¡Œç¨‹æœåŠ¡
+        # ĞĞ³Ì·şÎñ
         - id: hitch-stroke-server
           uri: lb://hitch-stroke-server
           predicates:
             - Path=/stroke/**
-        # è®¢å•æœåŠ¡
+        # ¶©µ¥·şÎñ
         - id: hitch-order-server
           uri: lb://hitch-order-server
           predicates:
             - Path=/order/**
-        # æ”¯ä»˜ç®¡ç†
+        # Ö§¸¶¹ÜÀí
         - id: hitch-payment-server
           uri: lb://hitch-payment-server
           predicates:
             - Path=/payment/**
-        # å­˜å‚¨ç®¡ç†
+        # ´æ´¢¹ÜÀí
         - id: hitch-storage-server
           uri: lb://hitch-storage-server
           predicates:
             - Path=/storage/**
-        # é€šçŸ¥æœåŠ¡
+        # Í¨Öª·şÎñ
         - id: hitch-notice-server
           uri: lb://hitch-notice-server
           predicates:
             - Path=/notice/**
-        # æ¶ˆæ¯æ¨é€æœåŠ¡ websocketä»£ç†
+        # ÏûÏ¢ÍÆËÍ·şÎñ websocket´úÀí
         - id: hitch-notice-service-ws
           uri: lb:ws://hitch-notice-service
           predicates:

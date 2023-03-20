@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public class MatAreaHelper {
 
-    private List<MatArea> matAreaList = new ArrayList<>();
+    private List<MatArea> matAreaList = new ArrayList<MatArea>();
 
 
     public void addMat(Mat mat) {
