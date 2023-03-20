@@ -10,8 +10,8 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://@mysql.addr@/hitch?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
-    username: hitch
-    password: hitch
+    username: root
+    password: root
     initialSize: 10
     minIdle: 20
     maxActive: 100

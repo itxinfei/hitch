@@ -19,10 +19,8 @@ import org.springframework.web.multipart.MultipartFile;
 @ApiResponses(@ApiResponse(code = 200, message = "处理成功"))
 public class APIController {
 
-
     @Autowired
     private AttachmentHandler attachmentHandler;
-
 
     @ApiOperation(value = "文件上传接口", tags = {"文件管理"})
     @PostMapping("/upload")

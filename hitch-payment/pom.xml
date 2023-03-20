@@ -20,7 +20,6 @@
         <project.context.path>/payment</project.context.path>
     </properties>
 
-
     <dependencies>
         <dependency>
             <groupId>com.heima</groupId>
@@ -32,12 +31,10 @@
             <artifactId>hitch-commons</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <!--nacos 注册中心-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
@@ -57,7 +54,6 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
-
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
             <artifactId>knife4j-spring-boot-starter</artifactId>
@@ -73,8 +69,6 @@
             <artifactId>wxpay-sdk</artifactId>
             <version>3.0.9.1</version>
         </dependency>
-
-
     </dependencies>
 
     <build>
@@ -151,6 +145,4 @@
             <!-- Docker maven plugin -->
         </plugins>
     </build>
-
-
 </project>
